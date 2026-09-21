@@ -1,0 +1,52 @@
+name: mj_3dgs_penthouse
+version: 1
+description: "3DGS-scanned penthouse (~24x33 m indoor). Visual mesh in 8 chunks + 15 sdfvoxel collision tiles baked from the same field, plus a 3DGS camera layer."
+tags: [indoor, scan, 3dgs, lcc2, sdf]
+backends: [mujoco]
+
+mjcf:
+  file: scene.xml
+
+# Required by the catalog schema -- a scene without a map: block is dropped from the
+# catalog entirely, and catalog membership is what lets the runner find the gs: block
+# below. NO MAP HAS BEEN GENERATED: this is a placeholder declaring where one should
+# go. mj_3dgs_15f is in the same state.
+#
+# Note for whoever bakes it: guide_ws's mjcf_to_occupancy.py cannot do this scene.
+# Its _geom_aabb_xy() handles box/cylinder/sphere/capsule/mesh and returns a
+# degenerate AABB for anything else, so all 42 type="sdf" geoms are dropped and it
+# exits with "no geoms intersect z=0.30 slice". Two further gotchas: bake_sdf forces
+# everything below FLOOR_SOLID_TO solid across the WHOLE bounding box, so the
+# synthetic slab is not walkable floor; and 4 cm scan speckle fragments the free
+# space unless the obstacle mask is opened first.
+map:
+  resolution: 0.05
+  margin: 0.5
+  size: 56.0            # footprint 41.6 x 54.0 m + margin
+  scan_step: 1.0
+  output: ../../maps/mj_3dgs_penthouse
+  exclude_bodies: [base_link]
+
+# The glazing is modelled explicitly (3DGS cannot reconstruct glass -- it puts the
+# gaussians on whatever is beyond the pane), leaving one 1.6 m door to the terrace.
+# 3DGS camera layer. Everything except `ply` is left at its default (hybrid,
+# anchor body_3dgs_visual, sh_degree 3, both colour cameras, cuda:0, scale 1.0),
+# which is the shape mj_3dgs_5f and mj_3dgs_15f ship.
+#
+# The ply is the _flat one, and that is not cosmetic: v11 de-warped the mesh and
+# cache/gauss.npz by z' = z - W(x,y) and left the original ply in the pre-de-warp
+# frame, which put the camera layer 25.2 mm off the collision layer (|dz| p50 on
+# up-facing faces). src/dewarp_ply.py bakes the same field in -> 13.2 mm, and the
+# ply then matches cache/gauss.npz at a nearest-neighbour p50 of 0.00 mm.
+#
+# anchor_body therefore stays at its default, body_3dgs_visual, AT IDENTITY.
+# Putting the correction on the anchor instead was built, measured and rejected:
+# 15F does pose that body (and every SDF tile body identically), but its transform
+# is horizontal-only (yaw, pos z = 0) so its floor plane is unaffected -- ours is
+# vertical, and would drag the collision tiles off the analytic plane.
+# See SOURCE.md, "The ply was in the pre-de-warp frame".
+#
+# The ply itself is NOT in git (1.40 GB); 5f/15f keep theirs out too and fetch
+# from the asset server. It must be staged into assets/ before this block works.
+gs:
+  ply: assets/penthouse_gs_sh3_zup_flat.ply
