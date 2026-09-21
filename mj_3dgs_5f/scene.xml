@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Robot-independent mj_3dgs_5f environment generated from the 3dgs2sdf scene_sdf.xml source. -->
+<mujoco model="mj_3dgs_5f">
+  <compiler angle="radian" autolimits="true" texturedir="assets"/>
+  <option timestep="0.002" integrator="implicitfast" cone="elliptic" impratio="10"
+          sdf_iterations="10" sdf_initpoints="20"/>
+
+  <visual>
+    <global offwidth="2400" offheight="1400"/>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.4 0.4 0.4" specular="0 0 0"/>
+    <quality shadowsize="4096"/>
+  </visual>
+
+  <extension>
+    <plugin plugin="sdfvoxel.grid">
+      <instance name="tile_00_00"><config key="path" value="assets/sdf/tile_00_00.npz"/></instance>
+      <instance name="tile_00_01"><config key="path" value="assets/sdf/tile_00_01.npz"/></instance>
+      <instance name="tile_00_02"><config key="path" value="assets/sdf/tile_00_02.npz"/></instance>
+      <instance name="tile_00_03"><config key="path" value="assets/sdf/tile_00_03.npz"/></instance>
+      <instance name="tile_00_04"><config key="path" value="assets/sdf/tile_00_04.npz"/></instance>
+      <instance name="tile_00_05"><config key="path" value="assets/sdf/tile_00_05.npz"/></instance>
+      <instance name="tile_01_00"><config key="path" value="assets/sdf/tile_01_00.npz"/></instance>
+      <instance name="tile_01_01"><config key="path" value="assets/sdf/tile_01_01.npz"/></instance>
+      <instance name="tile_01_02"><config key="path" value="assets/sdf/tile_01_02.npz"/></instance>
+      <instance name="tile_01_03"><config key="path" value="assets/sdf/tile_01_03.npz"/></instance>
+      <instance name="tile_01_04"><config key="path" value="assets/sdf/tile_01_04.npz"/></instance>
+      <instance name="tile_01_05"><config key="path" value="assets/sdf/tile_01_05.npz"/></instance>
+      <instance name="tile_02_00"><config key="path" value="assets/sdf/tile_02_00.npz"/></instance>
+      <instance name="tile_02_01"><config key="path" value="assets/sdf/tile_02_01.npz"/></instance>
+      <instance name="tile_02_02"><config key="path" value="assets/sdf/tile_02_02.npz"/></instance>
+      <instance name="tile_02_03"><config key="path" value="assets/sdf/tile_02_03.npz"/></instance>
+      <instance name="tile_02_04"><config key="path" value="assets/sdf/tile_02_04.npz"/></instance>
+      <instance name="tile_02_05"><config key="path" value="assets/sdf/tile_02_05.npz"/></instance>
+      <instance name="tile_03_00"><config key="path" value="assets/sdf/tile_03_00.npz"/></instance>
+      <instance name="tile_03_01"><config key="path" value="assets/sdf/tile_03_01.npz"/></instance>
+      <instance name="tile_03_02"><config key="path" value="assets/sdf/tile_03_02.npz"/></instance>
+      <instance name="tile_03_03"><config key="path" value="assets/sdf/tile_03_03.npz"/></instance>
+      <instance name="tile_03_04"><config key="path" value="assets/sdf/tile_03_04.npz"/></instance>
+      <instance name="tile_03_05"><config key="path" value="assets/sdf/tile_03_05.npz"/></instance>
+      <instance name="tile_04_00"><config key="path" value="assets/sdf/tile_04_00.npz"/></instance>
+      <instance name="tile_04_01"><config key="path" value="assets/sdf/tile_04_01.npz"/></instance>
+      <instance name="tile_04_02"><config key="path" value="assets/sdf/tile_04_02.npz"/></instance>
+      <instance name="tile_04_03"><config key="path" value="assets/sdf/tile_04_03.npz"/></instance>
+      <instance name="tile_04_04"><config key="path" value="assets/sdf/tile_04_04.npz"/></instance>
+      <instance name="tile_04_05"><config key="path" value="assets/sdf/tile_04_05.npz"/></instance>
+      <instance name="tile_05_00"><config key="path" value="assets/sdf/tile_05_00.npz"/></instance>
+      <instance name="tile_05_01"><config key="path" value="assets/sdf/tile_05_01.npz"/></instance>
+      <instance name="tile_05_02"><config key="path" value="assets/sdf/tile_05_02.npz"/></instance>
+      <instance name="tile_05_03"><config key="path" value="assets/sdf/tile_05_03.npz"/></instance>
+      <instance name="tile_05_04"><config key="path" value="assets/sdf/tile_05_04.npz"/></instance>
+      <instance name="tile_05_05"><config key="path" value="assets/sdf/tile_05_05.npz"/></instance>
+      <instance name="tile_06_00"><config key="path" value="assets/sdf/tile_06_00.npz"/></instance>
+      <instance name="tile_06_01"><config key="path" value="assets/sdf/tile_06_01.npz"/></instance>
+      <instance name="tile_06_02"><config key="path" value="assets/sdf/tile_06_02.npz"/></instance>
+      <instance name="tile_06_03"><config key="path" value="assets/sdf/tile_06_03.npz"/></instance>
+      <instance name="tile_06_04"><config key="path" value="assets/sdf/tile_06_04.npz"/></instance>
+      <instance name="tile_06_05"><config key="path" value="assets/sdf/tile_06_05.npz"/></instance>
+      <instance name="tile_07_00"><config key="path" value="assets/sdf/tile_07_00.npz"/></instance>
+      <instance name="tile_07_01"><config key="path" value="assets/sdf/tile_07_01.npz"/></instance>
+      <instance name="tile_07_02"><config key="path" value="assets/sdf/tile_07_02.npz"/></instance>
+      <instance name="tile_07_03"><config key="path" value="assets/sdf/tile_07_03.npz"/></instance>
+      <instance name="tile_07_04"><config key="path" value="assets/sdf/tile_07_04.npz"/></instance>
+      <instance name="tile_07_05"><config key="path" value="assets/sdf/tile_07_05.npz"/></instance>
+      <instance name="tile_08_00"><config key="path" value="assets/sdf/tile_08_00.npz"/></instance>
+      <instance name="tile_08_01"><config key="path" value="assets/sdf/tile_08_01.npz"/></instance>
+      <instance name="tile_08_02"><config key="path" value="assets/sdf/tile_08_02.npz"/></instance>
+      <instance name="tile_08_03"><config key="path" value="assets/sdf/tile_08_03.npz"/></instance>
+      <instance name="tile_08_04"><config key="path" value="assets/sdf/tile_08_04.npz"/></instance>
+      <instance name="tile_08_05"><config key="path" value="assets/sdf/tile_08_05.npz"/></instance>
+      <instance name="tile_09_00"><config key="path" value="assets/sdf/tile_09_00.npz"/></instance>
+      <instance name="tile_09_01"><config key="path" value="assets/sdf/tile_09_01.npz"/></instance>
+      <instance name="tile_09_02"><config key="path" value="assets/sdf/tile_09_02.npz"/></instance>
+      <instance name="tile_09_03"><config key="path" value="assets/sdf/tile_09_03.npz"/></instance>
+      <instance name="tile_09_04"><config key="path" value="assets/sdf/tile_09_04.npz"/></instance>
+      <instance name="tile_09_05"><config key="path" value="assets/sdf/tile_09_05.npz"/></instance>
+    </plugin>
+  </extension>
+
+  <default>
+    <!-- The robot include defines a translucent blue-grey root geom default.
+         Hide classless collision shells and opt visible scene geoms back in explicitly. -->
+    <geom rgba="0.5 0.6 0.7 0"/>
+    <!-- passive environment: the robot carries conaffinity=1 and collides with this;
+         the scene never self-collides (same convention as the source scene). -->
+    <default class="sdfcol">
+      <geom group="3" contype="1" conaffinity="0" condim="3" friction="1 0.005 0.0001"
+            solref="0.004 1" solimp="0.95 0.99 0.001" rgba="0.9 0.25 0.22 0.45"/>
+    </default>
+    <default class="vis">
+      <geom group="0" contype="0" conaffinity="0" rgba="1 1 1 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture name="atlas" type="2d" file="5F_3dgs_atlas.png"/>
+    <material name="scene_mat" texture="atlas" specular="0" shininess="0" reflectance="0"/>
+    <texture name="floor5f_tex" type="2d" file="bathroomTilesGrey.png"/>
+    <material name="floor5f_mat" texture="floor5f_tex" texrepeat="40 40"/>
+    <!-- Visual mesh: 300k-face decimation of the 3DGS scan (render is vertex-bound,
+         ~5x cheaper than the original 1M-face mesh). SDF collision is a separate
+         NPZ tile set, so mesh decimation does NOT affect collision fidelity — only
+         render cost. -->
+    <mesh name="visual" file="assets/5F_3dgs_visual.obj"/>
+    <mesh name="m_tile_00_00"><plugin instance="tile_00_00"/></mesh>
+    <mesh name="m_tile_00_01"><plugin instance="tile_00_01"/></mesh>
+    <mesh name="m_tile_00_02"><plugin instance="tile_00_02"/></mesh>
+    <mesh name="m_tile_00_03"><plugin instance="tile_00_03"/></mesh>
+    <mesh name="m_tile_00_04"><plugin instance="tile_00_04"/></mesh>
+    <mesh name="m_tile_00_05"><plugin instance="tile_00_05"/></mesh>
+    <mesh name="m_tile_01_00"><plugin instance="tile_01_00"/></mesh>
+    <mesh name="m_tile_01_01"><plugin instance="tile_01_01"/></mesh>
+    <mesh name="m_tile_01_02"><plugin instance="tile_01_02"/></mesh>
+    <mesh name="m_tile_01_03"><plugin instance="tile_01_03"/></mesh>
+    <mesh name="m_tile_01_04"><plugin instance="tile_01_04"/></mesh>
+    <mesh name="m_tile_01_05"><plugin instance="tile_01_05"/></mesh>
+    <mesh name="m_tile_02_00"><plugin instance="tile_02_00"/></mesh>
+    <mesh name="m_tile_02_01"><plugin instance="tile_02_01"/></mesh>
+    <mesh name="m_tile_02_02"><plugin instance="tile_02_02"/></mesh>
+    <mesh name="m_tile_02_03"><plugin instance="tile_02_03"/></mesh>
+    <mesh name="m_tile_02_04"><plugin instance="tile_02_04"/></mesh>
+    <mesh name="m_tile_02_05"><plugin instance="tile_02_05"/></mesh>
+    <mesh name="m_tile_03_00"><plugin instance="tile_03_00"/></mesh>
+    <mesh name="m_tile_03_01"><plugin instance="tile_03_01"/></mesh>
+    <mesh name="m_tile_03_02"><plugin instance="tile_03_02"/></mesh>
+    <mesh name="m_tile_03_03"><plugin instance="tile_03_03"/></mesh>
+    <mesh name="m_tile_03_04"><plugin instance="tile_03_04"/></mesh>
+    <mesh name="m_tile_03_05"><plugin instance="tile_03_05"/></mesh>
+    <mesh name="m_tile_04_00"><plugin instance="tile_04_00"/></mesh>
+    <mesh name="m_tile_04_01"><plugin instance="tile_04_01"/></mesh>
+    <mesh name="m_tile_04_02"><plugin instance="tile_04_02"/></mesh>
+    <mesh name="m_tile_04_03"><plugin instance="tile_04_03"/></mesh>
+    <mesh name="m_tile_04_04"><plugin instance="tile_04_04"/></mesh>
+    <mesh name="m_tile_04_05"><plugin instance="tile_04_05"/></mesh>
+    <mesh name="m_tile_05_00"><plugin instance="tile_05_00"/></mesh>
+    <mesh name="m_tile_05_01"><plugin instance="tile_05_01"/></mesh>
+    <mesh name="m_tile_05_02"><plugin instance="tile_05_02"/></mesh>
+    <mesh name="m_tile_05_03"><plugin instance="tile_05_03"/></mesh>
+    <mesh name="m_tile_05_04"><plugin instance="tile_05_04"/></mesh>
+    <mesh name="m_tile_05_05"><plugin instance="tile_05_05"/></mesh>
+    <mesh name="m_tile_06_00"><plugin instance="tile_06_00"/></mesh>
+    <mesh name="m_tile_06_01"><plugin instance="tile_06_01"/></mesh>
+    <mesh name="m_tile_06_02"><plugin instance="tile_06_02"/></mesh>
+    <mesh name="m_tile_06_03"><plugin instance="tile_06_03"/></mesh>
+    <mesh name="m_tile_06_04"><plugin instance="tile_06_04"/></mesh>
+    <mesh name="m_tile_06_05"><plugin instance="tile_06_05"/></mesh>
+    <mesh name="m_tile_07_00"><plugin instance="tile_07_00"/></mesh>
+    <mesh name="m_tile_07_01"><plugin instance="tile_07_01"/></mesh>
+    <mesh name="m_tile_07_02"><plugin instance="tile_07_02"/></mesh>
+    <mesh name="m_tile_07_03"><plugin instance="tile_07_03"/></mesh>
+    <mesh name="m_tile_07_04"><plugin instance="tile_07_04"/></mesh>
+    <mesh name="m_tile_07_05"><plugin instance="tile_07_05"/></mesh>
+    <mesh name="m_tile_08_00"><plugin instance="tile_08_00"/></mesh>
+    <mesh name="m_tile_08_01"><plugin instance="tile_08_01"/></mesh>
+    <mesh name="m_tile_08_02"><plugin instance="tile_08_02"/></mesh>
+    <mesh name="m_tile_08_03"><plugin instance="tile_08_03"/></mesh>
+    <mesh name="m_tile_08_04"><plugin instance="tile_08_04"/></mesh>
+    <mesh name="m_tile_08_05"><plugin instance="tile_08_05"/></mesh>
+    <mesh name="m_tile_09_00"><plugin instance="tile_09_00"/></mesh>
+    <mesh name="m_tile_09_01"><plugin instance="tile_09_01"/></mesh>
+    <mesh name="m_tile_09_02"><plugin instance="tile_09_02"/></mesh>
+    <mesh name="m_tile_09_03"><plugin instance="tile_09_03"/></mesh>
+    <mesh name="m_tile_09_04"><plugin instance="tile_09_04"/></mesh>
+    <mesh name="m_tile_09_05"><plugin instance="tile_09_05"/></mesh>
+  </asset>
+
+  <worldbody>
+    <light pos="-4.32 -5.46 6" dir="0 0 -1" directional="true" diffuse="0.35 0.35 0.35"
+           specular="0 0 0" castshadow="false"/>
+    <!-- PERF: analytic collision floor. The robot's feet are in constant floor
+         contact, and against the SDF tiles that is the dominant per-step cost
+         (~200 gradient-descent evals per foot-vs-tile pair). A plane-vs-geom
+         contact is analytic and nearly free, so this offloads foot-floor
+         collision from the 60 SDF tiles, which are then only exercised by walls
+         / furniture / protrusions the feet rarely touch. SDF fidelity is
+         untouched (tiles/voxels unchanged) — this only removes redundant
+         contacts.
+         z = -0.14 sits ~1 cm above the measured SDF floor collision surface
+         (z≈-0.15 across the walkable area, 91% within ±5 cm), so feet rest on
+         the plane BEFORE reaching the SDF floor zero-surface → no double
+         contact, and standing height matches the SDF-only baseline. Where the
+         real floor rises above -0.14 (steps/platforms) the SDF still catches it.
+         Invisible (group 3 + alpha 0): floor_backing already backs the visual.
+         A/B: comment this geom out to revert to SDF-only floor collision. -->
+    <geom name="floor" type="plane" pos="0 0 -0.14" size="60 45 0.1"
+          group="3" rgba="0 0 0 0" contype="1" conaffinity="0" condim="3"
+          friction="1 0.005 0.0001" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <!-- Visual backing floor: the scanned visual mesh has holes/cracks in its floor
+         (grazing-angle coverage gaps + decimation), and with no plane behind, the light
+         MuJoCo background showed through them as white tears. This opaque concrete-grey
+         plane sits at z=-0.45, just below the scan floor (surface ~z=-0.24..-0.38, only
+         0.2% of geometry is below -0.45), so intact floor still occludes it and only the
+         holes reveal grey instead of white. Visual only (contype/conaffinity 0); the SDF
+         tiles handle collision. -->
+    <geom name="floor_backing" type="plane" pos="0 0 -0.45" size="60 45 0.1"
+          rgba="0.42 0.42 0.44 1" group="0" contype="0" conaffinity="0"/>
+    <body name="body_3dgs_visual">
+      <geom name="ob_3dgs_visual" class="vis" type="mesh" mesh="visual"
+            material="scene_mat" rgba="1 1 1 1"/>
+    </body>
+    <body name="body_sdf_tile_00_00">
+      <geom name="ob_sdf_tile_00_00" class="sdfcol" type="sdf" mesh="m_tile_00_00"><plugin instance="tile_00_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_00_01">
+      <geom name="ob_sdf_tile_00_01" class="sdfcol" type="sdf" mesh="m_tile_00_01"><plugin instance="tile_00_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_00_02">
+      <geom name="ob_sdf_tile_00_02" class="sdfcol" type="sdf" mesh="m_tile_00_02"><plugin instance="tile_00_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_00_03">
+      <geom name="ob_sdf_tile_00_03" class="sdfcol" type="sdf" mesh="m_tile_00_03"><plugin instance="tile_00_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_00_04">
+      <geom name="ob_sdf_tile_00_04" class="sdfcol" type="sdf" mesh="m_tile_00_04"><plugin instance="tile_00_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_00_05">
+      <geom name="ob_sdf_tile_00_05" class="sdfcol" type="sdf" mesh="m_tile_00_05"><plugin instance="tile_00_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_00">
+      <geom name="ob_sdf_tile_01_00" class="sdfcol" type="sdf" mesh="m_tile_01_00"><plugin instance="tile_01_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_01">
+      <geom name="ob_sdf_tile_01_01" class="sdfcol" type="sdf" mesh="m_tile_01_01"><plugin instance="tile_01_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_02">
+      <geom name="ob_sdf_tile_01_02" class="sdfcol" type="sdf" mesh="m_tile_01_02"><plugin instance="tile_01_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_03">
+      <geom name="ob_sdf_tile_01_03" class="sdfcol" type="sdf" mesh="m_tile_01_03"><plugin instance="tile_01_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_04">
+      <geom name="ob_sdf_tile_01_04" class="sdfcol" type="sdf" mesh="m_tile_01_04"><plugin instance="tile_01_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_01_05">
+      <geom name="ob_sdf_tile_01_05" class="sdfcol" type="sdf" mesh="m_tile_01_05"><plugin instance="tile_01_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_00">
+      <geom name="ob_sdf_tile_02_00" class="sdfcol" type="sdf" mesh="m_tile_02_00"><plugin instance="tile_02_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_01">
+      <geom name="ob_sdf_tile_02_01" class="sdfcol" type="sdf" mesh="m_tile_02_01"><plugin instance="tile_02_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_02">
+      <geom name="ob_sdf_tile_02_02" class="sdfcol" type="sdf" mesh="m_tile_02_02"><plugin instance="tile_02_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_03">
+      <geom name="ob_sdf_tile_02_03" class="sdfcol" type="sdf" mesh="m_tile_02_03"><plugin instance="tile_02_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_04">
+      <geom name="ob_sdf_tile_02_04" class="sdfcol" type="sdf" mesh="m_tile_02_04"><plugin instance="tile_02_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_02_05">
+      <geom name="ob_sdf_tile_02_05" class="sdfcol" type="sdf" mesh="m_tile_02_05"><plugin instance="tile_02_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_00">
+      <geom name="ob_sdf_tile_03_00" class="sdfcol" type="sdf" mesh="m_tile_03_00"><plugin instance="tile_03_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_01">
+      <geom name="ob_sdf_tile_03_01" class="sdfcol" type="sdf" mesh="m_tile_03_01"><plugin instance="tile_03_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_02">
+      <geom name="ob_sdf_tile_03_02" class="sdfcol" type="sdf" mesh="m_tile_03_02"><plugin instance="tile_03_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_03">
+      <geom name="ob_sdf_tile_03_03" class="sdfcol" type="sdf" mesh="m_tile_03_03"><plugin instance="tile_03_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_04">
+      <geom name="ob_sdf_tile_03_04" class="sdfcol" type="sdf" mesh="m_tile_03_04"><plugin instance="tile_03_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_03_05">
+      <geom name="ob_sdf_tile_03_05" class="sdfcol" type="sdf" mesh="m_tile_03_05"><plugin instance="tile_03_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_00">
+      <geom name="ob_sdf_tile_04_00" class="sdfcol" type="sdf" mesh="m_tile_04_00"><plugin instance="tile_04_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_01">
+      <geom name="ob_sdf_tile_04_01" class="sdfcol" type="sdf" mesh="m_tile_04_01"><plugin instance="tile_04_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_02">
+      <geom name="ob_sdf_tile_04_02" class="sdfcol" type="sdf" mesh="m_tile_04_02"><plugin instance="tile_04_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_03">
+      <geom name="ob_sdf_tile_04_03" class="sdfcol" type="sdf" mesh="m_tile_04_03"><plugin instance="tile_04_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_04">
+      <geom name="ob_sdf_tile_04_04" class="sdfcol" type="sdf" mesh="m_tile_04_04"><plugin instance="tile_04_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_04_05">
+      <geom name="ob_sdf_tile_04_05" class="sdfcol" type="sdf" mesh="m_tile_04_05"><plugin instance="tile_04_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_00">
+      <geom name="ob_sdf_tile_05_00" class="sdfcol" type="sdf" mesh="m_tile_05_00"><plugin instance="tile_05_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_01">
+      <geom name="ob_sdf_tile_05_01" class="sdfcol" type="sdf" mesh="m_tile_05_01"><plugin instance="tile_05_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_02">
+      <geom name="ob_sdf_tile_05_02" class="sdfcol" type="sdf" mesh="m_tile_05_02"><plugin instance="tile_05_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_03">
+      <geom name="ob_sdf_tile_05_03" class="sdfcol" type="sdf" mesh="m_tile_05_03"><plugin instance="tile_05_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_04">
+      <geom name="ob_sdf_tile_05_04" class="sdfcol" type="sdf" mesh="m_tile_05_04"><plugin instance="tile_05_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_05_05">
+      <geom name="ob_sdf_tile_05_05" class="sdfcol" type="sdf" mesh="m_tile_05_05"><plugin instance="tile_05_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_00">
+      <geom name="ob_sdf_tile_06_00" class="sdfcol" type="sdf" mesh="m_tile_06_00"><plugin instance="tile_06_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_01">
+      <geom name="ob_sdf_tile_06_01" class="sdfcol" type="sdf" mesh="m_tile_06_01"><plugin instance="tile_06_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_02">
+      <geom name="ob_sdf_tile_06_02" class="sdfcol" type="sdf" mesh="m_tile_06_02"><plugin instance="tile_06_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_03">
+      <geom name="ob_sdf_tile_06_03" class="sdfcol" type="sdf" mesh="m_tile_06_03"><plugin instance="tile_06_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_04">
+      <geom name="ob_sdf_tile_06_04" class="sdfcol" type="sdf" mesh="m_tile_06_04"><plugin instance="tile_06_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_06_05">
+      <geom name="ob_sdf_tile_06_05" class="sdfcol" type="sdf" mesh="m_tile_06_05"><plugin instance="tile_06_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_00">
+      <geom name="ob_sdf_tile_07_00" class="sdfcol" type="sdf" mesh="m_tile_07_00"><plugin instance="tile_07_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_01">
+      <geom name="ob_sdf_tile_07_01" class="sdfcol" type="sdf" mesh="m_tile_07_01"><plugin instance="tile_07_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_02">
+      <geom name="ob_sdf_tile_07_02" class="sdfcol" type="sdf" mesh="m_tile_07_02"><plugin instance="tile_07_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_03">
+      <geom name="ob_sdf_tile_07_03" class="sdfcol" type="sdf" mesh="m_tile_07_03"><plugin instance="tile_07_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_04">
+      <geom name="ob_sdf_tile_07_04" class="sdfcol" type="sdf" mesh="m_tile_07_04"><plugin instance="tile_07_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_07_05">
+      <geom name="ob_sdf_tile_07_05" class="sdfcol" type="sdf" mesh="m_tile_07_05"><plugin instance="tile_07_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_00">
+      <geom name="ob_sdf_tile_08_00" class="sdfcol" type="sdf" mesh="m_tile_08_00"><plugin instance="tile_08_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_01">
+      <geom name="ob_sdf_tile_08_01" class="sdfcol" type="sdf" mesh="m_tile_08_01"><plugin instance="tile_08_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_02">
+      <geom name="ob_sdf_tile_08_02" class="sdfcol" type="sdf" mesh="m_tile_08_02"><plugin instance="tile_08_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_03">
+      <geom name="ob_sdf_tile_08_03" class="sdfcol" type="sdf" mesh="m_tile_08_03"><plugin instance="tile_08_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_04">
+      <geom name="ob_sdf_tile_08_04" class="sdfcol" type="sdf" mesh="m_tile_08_04"><plugin instance="tile_08_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_08_05">
+      <geom name="ob_sdf_tile_08_05" class="sdfcol" type="sdf" mesh="m_tile_08_05"><plugin instance="tile_08_05"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_00">
+      <geom name="ob_sdf_tile_09_00" class="sdfcol" type="sdf" mesh="m_tile_09_00"><plugin instance="tile_09_00"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_01">
+      <geom name="ob_sdf_tile_09_01" class="sdfcol" type="sdf" mesh="m_tile_09_01"><plugin instance="tile_09_01"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_02">
+      <geom name="ob_sdf_tile_09_02" class="sdfcol" type="sdf" mesh="m_tile_09_02"><plugin instance="tile_09_02"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_03">
+      <geom name="ob_sdf_tile_09_03" class="sdfcol" type="sdf" mesh="m_tile_09_03"><plugin instance="tile_09_03"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_04">
+      <geom name="ob_sdf_tile_09_04" class="sdfcol" type="sdf" mesh="m_tile_09_04"><plugin instance="tile_09_04"/></geom>
+    </body>
+    <body name="body_sdf_tile_09_05">
+      <geom name="ob_sdf_tile_09_05" class="sdfcol" type="sdf" mesh="m_tile_09_05"><plugin instance="tile_09_05"/></geom>
+    </body>
+  </worldbody>
+</mujoco>

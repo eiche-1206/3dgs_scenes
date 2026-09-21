@@ -1,0 +1,8 @@
+newmtl material_0
+Ka 1.000 1.000 1.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+Ns 1.0
+d 1.0
+illum 1
+map_Kd 5F_3dgs_atlas.png
