@@ -1,3 +1,1 @@
-# 高斯点云原始文件不入库：单个 330MB~1.8GB，超 GitHub 100MB 上限。
-# 缺 ply 时场景自动降级 mujoco_only（见各 meta.yaml 的 gs: 段），碰撞与视觉网格不受影响。
-*.ply
+# 高斯点云 .ply 走 Git LFS（见 .gitattributes），不入普通 git 对象库。
