@@ -1,0 +1,23 @@
+name: mj_3dgs_15f
+version: 1
+description: "3DGS-scanned office floor 15F (~40x74 m). Visual mesh + 60 sdfvoxel collision tiles baked from the same field."
+tags: [indoor, scan, 3dgs, sdf, large]
+backends: [mujoco]
+
+mjcf:
+  file: scene.xml
+
+map:
+  resolution: 0.05
+  margin: 0.5
+  size: 78.1
+  scan_step: 1.0
+  output: ../../maps/mj_3dgs_15f
+  exclude_bodies: [base_link, base_Link]
+
+# 3DGS 渲染声明（默认 hybrid）。ply 为扫描帧 Z-up 导出；scan→world 的
+# +13.5°/平移由锚定 body_3dgs_visual 运行时读取。
+# 可选 mode: mujoco_only|3dgs_only|hybrid（省略=hybrid），其余可选键见母仓 gs-camera-guide §3。
+# ply 缺失即整场降级 mujoco_only（资产由内网资产服务分发）。
+gs:
+  ply: assets/15F_gs_sh3_zup.ply
