@@ -1,0 +1,30 @@
+name: mj_3dgs_hall
+version: 1
+description: "XGrids LCC2 会议厅扫描重建。L 形地面 727.9 m2，走廊层高 2.79 m / 宴会厅 5.24 m。高斯 carve SDF 碰撞，8 块视觉网格 + 独立近平地板补片。"
+tags: [indoor, scan, 3dgs, lcc2, sdf]
+backends: [mujoco]
+
+mjcf:
+  file: scene.xml
+
+# catalog schema 要求有 map: 块，但**没有烘过占据栅格**——与 mj_3dgs_penthouse /
+# mj_3dgs_15f 同一状态。mjcf_to_occupancy.py 会丢掉所有 type="sdf" geom，
+# 烘不了这类场景。
+map:
+  resolution: 0.05
+  margin: 0.5
+  size: 52.0            # 足迹 46.5 x 43.6 m + margin
+  scan_step: 1.0
+  output: ../../maps/mj_3dgs_hall
+  exclude_bodies: [base_link]
+
+# 3DGS 相机层。ply 是**去漂移后**的那一份（dewarp_ply.py），这不是美观问题：
+# 反漂移把网格与 cache/gauss.npz 都按 z' = z - W(x,y) 移过了，原始 ply 还留在
+# 反漂移前的帧里，相机层就会与碰撞层差一个漂移场（位移 p5..p95 -44..+52 mm）。
+# anchor_body 因此保持默认 body_3dgs_visual 且为**恒等**。
+#
+# ⚠️ 这份扫描是 **SH degree 0**（源 .lcc2 就是 `sh bands: 0`，不是导出丢的），
+#    相机层会渲成视角无关的平光。启用时要把 sh_degree 设成 0。
+gs:
+  ply: assets/CH_gs_sh3_zup_flat.ply
+  sh_degree: 0
